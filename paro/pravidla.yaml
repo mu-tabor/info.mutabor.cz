@@ -1,0 +1,85 @@
+title: Pravidla participativního rozpočtu
+desc: stranka pro TS
+updated_at: 2021-01-18T12:47:37.254Z
+layout: page
+breadcrumbs:
+  - link: /paro
+    title: Participativní rozpočet
+children:
+  - component: MDText
+    content: |
+      ## 1. Úvodní ustanovení
+
+      Cílem Pravidel participativního rozpočtu města Tábora (dále také „Pravidel“) je:
+      - nastavit fungování participativního rozpočtu ve městě tak, aby se ho každý občan města mohl zúčastnit,
+      - identifikovat nutné kroky a jejich aktéry.
+
+      ## 2. Vymezení pojmů
+      1. Participativní rozpočet (dále „PARO“) je proces, v rámci kterého je občanům umožněno navrhovat projekty ve veřejném prostoru, udělovat jim podporu palečkováním a hlasovat o nich v aketě.
+      3. Projekt je investiční akce nebo oprava realizovaná na území města a majetku města, na veřejně přístupném místě. Zahrnuje jak náklady na jeho pořízení, tak i provozní náklady po dobu 3 let. Provozní náklady není možné využít k jinému účelu.
+      5. Koordinátor projektu je osoba, do jejíž kompetence spadá koordinace celého procesu participativního rozpočtu včetně dohledu nad realizací projektu a následnou kontrolou.
+      6. Navrhovatel projektu je občan města, který návrh projektu podal.
+      7. Výzva (ročník) je jeden cyklus PARO. Výzva obsahuje harmonogram, rozpočtový limit pro projekt, počet nutných palečků pro postup do ověřování proveditelnosti. Výzva je schvalována Radou města.
+
+      ## 3. Průběh výzvy
+      1. PARO se skládá z několika navazujících a pravidelně se opakujících cyklů - výzev:
+          1. zahájení výzvy radou města,
+          2. podávání návrhů uživateli,
+          3. sběr základní podpory (palečkování),
+          4. posuzování proveditelnosti návrhů,
+          6. hlasování o návrzích v anketě,
+          7. vyhodnocení ankety a rozhodnutí o realizaci nejlepších projektů,
+          8. realizace projektů městem.
+      1. Termíny pro jednotlivé fáze PARO stanovuje rada města v souladu s čl. 4., odst. 2 těchto Pravidel.
+
+      ## 4. Podávání návrhů projektů
+      1. Každý uživatel se může aktivně zúčastnit a může v rámci jedné výzvy podat nejvýše jeden projekt.
+      2. Návrh na jednotném formuláři musí obsahovat minimálně tyto informace:
+          1. název projektu,
+          2. popis návrhu projektu a stručné shrnutí,
+          3. veřejný přínos projektu,
+          4. umístění projektu,
+          5. předpokládaný rozpočet s odkazy (např. na eshop) na jednotlivé položky, které potvrdí jejich cenu. Provozní náklady je nutné vyčíslit také. Způsob není určen. 
+          6. doplňující situační nákres, fotodokumentaci či ilustraci.
+      3. Kontakty a způsoby pro podávání projektů budou uvedeny na [webových stránkách PARO](http://taborudrzitelne.cz/paro/).
+
+      ## 5. Vhodné návrhy
+      1. Podané návrh musí vyhovět následujícím omezením:
+          1. je veřejně prospěšný, 
+          2. město má kompetenci ho realizovat,
+          3. musí být na území města a majetku města, (pro info [lze použít GIS portál](http://mapy.mutabor.cz/mapa/katastralni-mapa-g/?c=-734594%3A-1119564&z=6&lb=of2015&ly=uln%2Cpag%2Cpammg&lbo=1&lyo=))
+          4. celkové předpokládané náklady na realizaci, včetně 1. jeho provozních nákladů po dobu 3 let nepřekračují 500 000 Kč (včetně DPH),
+      2. do rozpočtu návrhu musí být zahrnuty veškeré výdaje (investiční i provozní) projektu, bez ohledu na případné příjmy,
+      4. projekt nesmí propagovat produkty, služby, činnosti či stanoviska subjektů komerčního i nekomerčního charakteru, zejména náboženského či politického.
+
+      ## 6. Ověření proveditelnosti projektu
+      2. U každého podporovaného návrhu projektu bude městem prověřena jeho proveditelnost, a to především se zřetelem na:
+          1. formální náležitosti projektu,
+          2. soulad projektu s požadavky stanovenými v těchto Pravidlech pro vhodné projekty,
+          3. přiměřenost předpokládaných nákladů projektu,
+          4. skutečnost, zda projekt není v rozporu s plánovanými akcemi města,
+          5. soulad s platnou územně plánovací dokumentací města,
+          6. soulad se zákony a jinými právními předpisy.
+      3. Navrhovatel projektu bude vyrozuměn, zda je jím navržený projekt:
+          1. proveditelný,
+          2. neproveditelný.
+      4. Ve fázi podávání návrhů bude mít navrhovatel možnost provést dílčí úpravy projektu podle zpětné vazby ze strany úřadu.
+      5. Do hlasování v anketě postupují pouze proveditelné projekty, ostatní jsou označeny jako neproveditelné.
+
+      ## 7. Hlasování
+      2. Termíny pro zahájení a ukončení hlasování jsou parametry _Výzvy_.
+      3. Hlasování probíhá v elektronické podobě na webových stránkách a bude včas anoncováno.
+      4. Podporu projektu občan vyjadřuje v termínu hlasování kladnými hlasy, kterých má k dispozici max. 3.
+      5. Nesouhlas s projektem občan vyjadřuje v termínu hlasování záporným hlasem, který má 1.
+          
+      ## 8. Výběr návrhů k realizaci
+      1. Po ukončení hlasování budou sečteny všechny platné hlasy.
+      2. Projekty budou seřazeny dle součtu kladných hlasů, od kterých se odečtou hlasy záporné (v případě shody rozhodují doplňující kritéria - např. počet hlasujících).
+      3. Výsledky hlasování je poté předloženo Radě města, která na jeho základě určí projekty, které budou postoupeny do realizace.
+      5. Výsledky hlasování a vítězné projekty budou zveřejněny na webových stránkách PARO.
+          
+      ## 9. Realizace projektů
+      1. Vítězné projekty budou financovány a realizovány městem standardním procesem za spolupráce s navrhovatelem věcně příslušným odborem města.
+      2. Pokud jsou dva nebo více vítězných projektů neslučitelné (místně či časově) je realizován ten s větším počtem hlasů.
+      3. Pokud dojde zásahem vyšší moci k nerealizovatelnosti projektu, nebude projekt dokončen.
+      4. Na realizaci projektu není právní nárok.

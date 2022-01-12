@@ -1,0 +1,25 @@
+title: Middletown
+lang: cs
+twitter:
+facebook: https://www.facebook.com/taborudrzitelne
+instagram:
+cdn: https://modurad.otevrenamesta.cz/media/mutabor
+cdnapi: https://modurad.otevrenamesta.cz/cdn
+menu:
+- label: participativní rozpočet
+  link: /paro
+- label: ankety
+  link: /ankety
+globalComponents:
+  - breadCrumbs
+  - paginator
+detailpages:
+  - path: /clanky/:id
+    component: ./components/detailPage/post.js
+  # - path: /kalendar/:id
+  #   component: ./components/detailPage/kalendar.js
+    # children:
+    #   - component: newestItemsText
+    #     title: podobne clanky
+    #     pocet: 5
+    #     url: /api/uni/posts/
