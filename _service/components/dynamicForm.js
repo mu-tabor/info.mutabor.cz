@@ -2,7 +2,7 @@ const formComponents = {
   finput: {
     props: [ 'data', 'cfg' ],
     template: `
-    <input class="input" :type="cfg.type" 
+    <input :type="cfg.type" 
       :value="data[cfg.name]"
       @input="evt => data[cfg.name] = evt.target.value" />
     `
@@ -10,7 +10,7 @@ const formComponents = {
   ftextarea: {
     props: [ 'data', 'cfg' ],
     template: `
-    <textarea class="textarea" :rows="cfg.rows"
+    <textarea :rows="cfg.rows"
       :value="data[cfg.name]"
       @input="evt => data[cfg.name] = evt.target.value" />
     `
@@ -33,6 +33,7 @@ export default {
       formdata: []
     }
   },
+  props: ['cfg', 'data', 'submit'],
   computed: {
     hasErrors: function () {
       this.errors.length > 0
@@ -55,12 +56,12 @@ export default {
       if (invalid) return
       this.$data.submitting = true
       try {
-        const res = await axios.post(this.$props.cfg.url, data)
+        const res = await this.$props.submit(this.formdata)
       } catch (err) {
         this.$store.dispatch('toast', { message, type: 'error' })
       } finally {
         this.$data.submitting = false
-      }      
+      }
     },
     validate: function () {
       _.map(this.$data.formcontrol, i => {
@@ -74,38 +75,28 @@ export default {
       return this.$data.errors[name]
     }
   },
-  props: ['cfg', 'data'],
   components: formComponents,
   template: `
 <form @submit.prevent="handleSubmit">
 
-  <div class="columns is-flex-wrap-wrap">
-    <div class="column" :class="i.class" v-for="i, idx in $data.formcontrol" :key="idx">
-
-      <div class="field">
-        <label class="label">{{ i.label }}</label>
-        
-        <div class="control has-icons-right">
-          <component :is="i.component" 
-            :class="getError(i.name) ? 'is-danger' : 'is-success'"
-            :data="$data.formdata" :cfg="i"
-            :placeholder="i.placeholder" />
-          <span class="icon is-small is-right">
-            <i class="fas" :class="getError(i.name) ? 'fa-exclamation-triangle' : 'fa-check'"></i>
-          </span>
-        </div>
-        
-        <p v-if="getError(i.name)" class="help is-danger">{{ getError(i.name) }}</p>
-
-      </div>
-
-    </div>
+  <div :class="i.class" v-for="i, idx in $data.formcontrol" :key="idx">
+    <label for="firstname">
+      {{ i.label }}
+      <component :is="i.component"
+        :aria-invalid="getError(i.name) !== null"
+        :data="$data.formdata" :cfg="i"
+        :placeholder="i.placeholder" />
+      
+      <small v-if="getError(i.name)" class="help is-danger">
+        {{ getError(i.name) }}
+      </small>
+    </label>
   </div>
 
   <slot name="submitbuttons" :hasErrors="hasErrors" :submitting="submitting">  
-    <button class="button is-success" :disabled="submitting || hasErrors">
+    <button :disabled="submitting || hasErrors">
       <span class="icon is-small"><i class="fas fa-bold"></i></span>
-      <span>uložit</span>
+      uložit
     </button>
   </slot>
 

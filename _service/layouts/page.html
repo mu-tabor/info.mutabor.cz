@@ -1,0 +1,19 @@
+<div>
+
+  <pageHeader />
+
+  <main class="container">
+    <breadCrumbs v-if="data.breadcrumbs" :data="data.breadcrumbs" />
+    
+    <h1 v-if="data.title">{{data.title}}</h1>
+
+    <component 
+      :is="i.component" :data="i" 
+      
+      v-for="(i, idx) in data.children" :key="idx" />
+      
+  </main>
+
+  <pageFooter />
+
+</div>

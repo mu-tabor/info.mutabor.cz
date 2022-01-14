@@ -4,7 +4,11 @@ updated_at: 2021-01-18T12:47:37.254Z
 layout: page
 children:
   - component: MDText
-    class: content
-    content: Participativní rozpočet, zkráceně PaRo je nástroj občanské participace. PaRo ma nejaka [pravidla](/paro/pravidla/). 
-  - component: PaRoIndex
+    content: |
+      Participativní rozpočet (PaRo) je nástroj občanské participace,
+      který umožňuje obyvatelům podávat návrhy projektů ve veřejném prostoru.
+      O těchto pak lidé hlasují v anketě. 
+      Na základě výsledků ankety rada města rozhodne, které návrhy město zrealizuje.
+      Detailní [pravidla jsou zde](/paro/pravidla/). 
+  - component: paro/index
     url: https://modurad.otevrenamesta.cz/omstredni/paro/

@@ -1,0 +1,14 @@
+<div>
+  <pageHeader />
+
+  <main class="container">
+
+      <component 
+        :is="i.component" :data="i" 
+        
+        v-for="(i, idx) in data.children" :key="idx" />
+
+  </main>
+
+  <pageFooter />
+</div>

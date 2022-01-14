@@ -27,4 +27,14 @@ export default `
   component: finput
   rules: required
   class: is-full
+
+- name: poloha
+  label: poloha ve formatu
+  component: finput
+  rules: required
+
+- name: photo
+  label: odkaz na fotografii
+  component: finput
+  rules: required
 `

@@ -6,5 +6,5 @@ breadcrumbs:
   - link: /paro
     title: Participativní rozpočet
 children:
-  - component: paro/projekt
+  - component: paro/detail
     url: https://modurad.otevrenamesta.cz/omstredni/paro/
