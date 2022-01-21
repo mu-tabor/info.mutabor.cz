@@ -1,5 +1,3 @@
-title: Přidat nebo upravit projekt
-desc: stranka pro TS
 updated_at: 2021-01-18T12:47:37.254Z
 layout: page
 breadcrumbs:
@@ -7,4 +5,4 @@ breadcrumbs:
     title: Participativní rozpočet
 children:
   - component: paro/detail
-    url: https://modurad.otevrenamesta.cz/omstredni/paro/
+    url: https://modurad.otevrenamesta.cz/mutabor/paro/

@@ -39,9 +39,12 @@ children:
           2. popis návrhu projektu a stručné shrnutí,
           3. veřejný přínos projektu,
           4. umístění projektu,
-          5. předpokládaný rozpočet s odkazy (např. na eshop) na jednotlivé položky, které potvrdí jejich cenu. Provozní náklady je nutné vyčíslit také. Způsob není určen. 
+          5. předpokládaný rozpočet s odkazy (např. na eshop) na jednotlivé položky, 
+            které potvrdí jejich cenu. Provozní náklady je nutné vyčíslit také. 
+            Způsob není určen. 
           6. doplňující situační nákres, fotodokumentaci či ilustraci.
-      3. Kontakty a způsoby pro podávání projektů budou uvedeny na [webových stránkách PARO](http://taborudrzitelne.cz/paro/).
+      3. Podávání projektových návrhů mohou pouze přihlášení uživatelé
+        pomocí [formuláře na adrese /paro/projekt](/paro/projekt)
 
       ## 5. Vhodné návrhy
       1. Podané návrh musí vyhovět následujícím omezením:

@@ -4,10 +4,15 @@ updated_at: 2021-01-18T12:47:37.254Z
 layout: default
 children:
   - component: composition
-    class: container
+    class: grid
     children:
-      - component: hero
-        class: is-info
-        title: Middletown - virtuální město
+      - component: MDText
         content: |
-          Ukázka webu střdně velkého města (ORP)
+          ### Participativní rozpočet
+          
+          [více ZDE](/paro)
+      - component: MDText
+        content: |
+          ### Ankety
+          
+          v přípravě

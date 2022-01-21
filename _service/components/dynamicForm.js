@@ -33,7 +33,7 @@ export default {
       formdata: []
     }
   },
-  props: ['cfg', 'data', 'submit'],
+  props: ['cfg', 'data', 'submit', 'extracomponents'],
   computed: {
     hasErrors: function () {
       this.errors.length > 0
@@ -56,7 +56,7 @@ export default {
       if (invalid) return
       this.$data.submitting = true
       try {
-        const res = await this.$props.submit(this.formdata)
+        const res = await this.$props.submit(_.clone(this.formdata))
       } catch (err) {
         this.$store.dispatch('toast', { message, type: 'error' })
       } finally {
@@ -71,6 +71,12 @@ export default {
       })
       return _.some(this.$data.errors, (v, k) => (v !== null))
     },
+    getComponent: function (name) {
+      if (name in this.extracomponents) {
+        return this.extracomponents[name]
+      }
+      return name
+    },
     getError: function (name) {
       return this.$data.errors[name]
     }
@@ -80,12 +86,13 @@ export default {
 <form @submit.prevent="handleSubmit">
 
   <div :class="i.class" v-for="i, idx in $data.formcontrol" :key="idx">
-    <label for="firstname">
+    <label :for="i.name">
       {{ i.label }}
-      <component :is="i.component"
+      <component :is="getComponent(i.component)"
         :aria-invalid="getError(i.name) !== null"
         :data="$data.formdata" :cfg="i"
-        :placeholder="i.placeholder" />
+        :placeholder="i.placeholder"
+        :name="i.name" />
       
       <small v-if="getError(i.name)" class="help is-danger">
         {{ getError(i.name) }}

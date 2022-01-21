@@ -1,10 +1,11 @@
-title: Middletown
+title: Tábor
 lang: cs
 twitter:
 facebook: https://www.facebook.com/taborudrzitelne
 instagram:
 cdn: https://modurad.otevrenamesta.cz/media/mutabor
 cdnapi: https://modurad.otevrenamesta.cz/cdn
+profileURL: https://modurad.otevrenamesta.cz/mutabor/auth/profile
 menu:
 - label: participativní rozpočet
   link: /paro

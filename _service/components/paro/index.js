@@ -51,7 +51,7 @@ export default {
       <kbd v-if="projekty.length === 0">zatím žádné návrhy nedorazily :(</kbd>
       <div v-else class="grid">
         <ProjectCard v-for="i,idx in projekty" :key="idx" 
-            :proj="i" :callid="curr.id" />
+            :proj="i" :call="curr" />
       </div>
     </div>
     <kbd v-else>Není žádná aktuální výzva</kbd>

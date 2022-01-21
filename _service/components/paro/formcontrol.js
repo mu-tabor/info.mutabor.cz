@@ -24,7 +24,7 @@ export default `
   
 - name: budget
   label: rozpočet projektu, opřený o nějakou referenci (eshop, konzultace se řemeslníkem)
-  component: finput
+  component: budgeteditor
   rules: required
   class: is-full
 
