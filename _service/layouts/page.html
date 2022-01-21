@@ -1,19 +1,11 @@
-<div>
+<main class="container">
+  <breadCrumbs v-if="data.breadcrumbs" :data="data.breadcrumbs" />
+  
+  <h1 v-if="data.title">{{data.title}}</h1>
 
-  <pageHeader />
-
-  <main class="container">
-    <breadCrumbs v-if="data.breadcrumbs" :data="data.breadcrumbs" />
+  <component 
+    :is="i.component" :data="i" 
     
-    <h1 v-if="data.title">{{data.title}}</h1>
-
-    <component 
-      :is="i.component" :data="i" 
-      
-      v-for="(i, idx) in data.children" :key="idx" />
-      
-  </main>
-
-  <pageFooter />
-
-</div>
+    v-for="(i, idx) in data.children" :key="idx" />
+    
+</main>

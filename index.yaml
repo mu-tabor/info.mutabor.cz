@@ -16,3 +16,9 @@ children:
           ### Ankety
           
           v přípravě
+      - component: MDText
+        disabled: true
+        content: |
+          ### Infostreams
+          
+          v přípravě

@@ -14,9 +14,12 @@ menu:
 globalComponents:
   - breadCrumbs
   - paginator
-detailpages:
-  - path: /clanky/:id
-    component: ./components/detailPage/post.js
+apps:
+  - path: /paro/
+    title: Participativní rozpočet
+    module: ./paro/index.js
+    layout: page
+    url: https://modurad.otevrenamesta.cz/mutabor/paro/
   # - path: /kalendar/:id
   #   component: ./components/detailPage/kalendar.js
     # children:
