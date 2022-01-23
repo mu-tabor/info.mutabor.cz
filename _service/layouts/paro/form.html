@@ -1,0 +1,13 @@
+<div v-if="loaded">
+  <kbd v-if="canEdit">
+    podávat návrhy lze až od {{ curr.submission_start | date }}
+  </kbd>
+  <div v-else-if="this.$store.getters.userLogged">
+    <DynamicForm :cfg="formcfg" :data="projekt" :submit="submit"
+      :extracomponents="fc" />
+    <a role="button" class="secondary" href="..">storno</a>
+  </div>
+  <kbd v-else>
+    pracovat s projektovým návrhem může pouze přihlášený uživatel
+  </kbd>
+</div>

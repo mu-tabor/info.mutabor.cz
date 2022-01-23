@@ -18,6 +18,7 @@ apps:
   - path: /paro/
     title: Participativní rozpočet
     module: ./paro/index.js
+    templates: ./paro/
     layout: page
     url: https://modurad.otevrenamesta.cz/mutabor/paro/
   # - path: /kalendar/:id

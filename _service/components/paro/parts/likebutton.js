@@ -1,4 +1,4 @@
-export default {
+export default (templates) => ({
   data: () => {
     return {
       support: false
@@ -35,14 +35,5 @@ export default {
     }
   },
   props: ['call', 'proj', 'API'],
-  template: `
-    <div v-if="canSupport">
-      <button :disabled="!$store.state.user" @click="sendSupport">
-        {{supportbutt}}
-      </button>
-      <span v-if="!$store.state.user">
-        Pro udílení "Líbí se mi" se přihlašte
-      </span>
-    </div>
-  `
-}
+  template: templates['likebutton']
+})

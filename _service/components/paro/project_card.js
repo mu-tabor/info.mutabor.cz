@@ -1,4 +1,4 @@
-export default {
+export default (templates) => ({
   props: ['proj', 'call'],
   computed: {
     url: function () {
@@ -11,13 +11,5 @@ export default {
       }
     }
   },
-  template: `
-    <div class="column">
-      <img :src="proj.photo" /><br/>
-      <hgroup>
-        <h4><router-link :to="url">{{ proj.name }}</router-link>
-        <h5>{{ proj.desc }}</h5>
-      </hgroup>
-    </div>
-  `
-}
+  template: templates['project_card']
+})

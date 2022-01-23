@@ -2,7 +2,7 @@ import DynamicForm from '../dynamicForm.js'
 import formcontrol from './formcontrol.js'
 import budgeteditor from './parts/budgeteditor.js'
 
-export default {
+export default (templates) => ({
   data: function () {
     return {
       loaded: false,
@@ -39,9 +39,9 @@ export default {
     }
   },
   methods: {
-    edit: function () {
-      this.modalopened = true
-    },
+    // edit: function () {
+    //   this.modalopened = true
+    // },
     submit: function (data) {
       if (this.projekt) {
         const u = `${this.$props.data.url}${this.$data.curr.id}/${this.projekt.id}`
@@ -52,19 +52,5 @@ export default {
     }
   },
   components: { DynamicForm },
-  template: `
-  <div v-if="loaded">
-    <kbd v-if="canEdit">
-      podávat návrhy lze až od {{ curr.submission_start | date }}
-    </kbd>
-    <div v-else-if="this.$store.getters.userLogged">
-      <DynamicForm :cfg="formcfg" :data="projekt" :submit="submit"
-        :extracomponents="fc" />
-      <a role="button" class="secondary" href="..">storno</a>
-    </div>
-    <kbd v-else>
-      pracovat s projektovým návrhem může pouze přihlášený uživatel
-    </kbd>
-  </div>
-  `
-}
+  template: templates['form']
+})

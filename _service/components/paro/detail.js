@@ -1,6 +1,6 @@
-import LikeButton from './parts/likebutton.js'
+import LikeButtonFN from './parts/likebutton.js'
 
-export default {
+export default (templates) => ({
   data: function () {
     return {
       loaded: false,
@@ -25,17 +25,8 @@ export default {
     }
   },
   props: ['data'],
-  components: { LikeButton },
-  template: `
-    <div v-if="loaded">
-      <hgroup>
-        <h1>{{ projekt.name }}</h1>
-        <h2>{{ projekt.desc }}</h2>
-      </hgroup>
-      <img :src="projekt.photo" />  
-      
-      <markdown :text="projekt.content" />
-      <LikeButton :call="curr" :proj="projekt" :API="this.$props.data.url" />
-    </div>
-  `
-}
+  components: { 
+    LikeButton: LikeButtonFN(templates) 
+  },
+  template: templates['detail']
+})

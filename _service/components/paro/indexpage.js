@@ -1,6 +1,6 @@
-import ProjectCard from './project_card.js'
+import ProjectCardFN from './project_card.js'
 
-export default {
+export default (templates) => ({
   data: function () {
     return {
       loaded: false,
@@ -25,39 +25,11 @@ export default {
       this.$data.loaded = true
     }
   },
-  components: { ProjectCard },
-  template: `
-  <div v-if="loaded">
-    <div v-if="curr">
-      <div class="grid">
-        <div>        
-          <h4 class="title">{{ curr.name }}</h4>
-          <p>
-            Začátek podávání návrhů: {{ curr.submission_start | date }}<br/>
-            Konec navrhování: {{ curr.submission_end | date }}<br/>
-            Začátek ověřování návrhů: {{ curr.thinking_start | date }}<br/>
-            Začátek hlasování v anketě: {{ curr.voting_start | date }}<br/>
-            Konec hlasování: {{ curr.voting_end | date }}<br/>
-            Limit rozpočtu návrhu: {{ curr.budgetlimit }} Kč<br/>
-            Počet palečků základní podpory: {{ curr.minimum_support }}
-          </p>
-        </div>
-        <router-link :to="{name:'paroform'}" role="button">
-          podat/upravit projekt
-        </router-link>
-      </div>
-      
-      <hr />
-      <kbd v-if="projekty.length === 0">zatím žádné návrhy nedorazily :(</kbd>
-      <div v-else class="grid">
-        <ProjectCard v-for="i,idx in projekty" :key="idx" 
-            :proj="i" :call="curr" />
-      </div>
-    </div>
-    <kbd v-else>Není žádná aktuální výzva</kbd>
-  </div>
-  `
-}
+  components: { 
+    ProjectCard: ProjectCardFN(templates) 
+  },
+  template: templates['index']
+})
 
 // `<h4>archiv</h4>
 // <ul class="menu-list" v-if="loaded">
